@@ -1,0 +1,20 @@
+version: '3'
+
+services:
+  java:
+    image: openjdk:17-jdk-buster
+    container_name: fastapi
+    restart: always
+    environment:
+      TZ: Asia/Shanghai
+    volumes:
+      - ./log:/data/log:rw
+      - ./config:/data/config:ro
+      - ./target/fastapi.jar:/data/app.jar
+    entrypoint: java -Djava.security.egd=file:/dev/./urandom -Dspring.config.location=/data/config/ -jar /data/app.jar \
+      -Xms1024m -Xmx1024m -Xmn256m -Xss256k \
+      -XX:MetaspaceSize=128m -XX:MaxMetaspaceSize=128m -XX:SurvivorRatio=8 -XX:+UseConcMarkSweepGC \
+      --appendonly yes
+    ports:
+      - "8080:8080/tcp"
+    network_mode: bridge

@@ -1,0 +1,168 @@
+# 项目相关配置
+project:
+  # 名称
+  name: FastAPI
+  # 版本
+  version: 1.0.0
+  # 安全配置
+  secure:
+    # 签名配置
+    sign:
+      # 过期时间（秒）
+      maxTime: 60
+    # 令牌密钥
+    secret: abcdefghijklmnopqrstuvwxyz
+    # 防止XSS攻击
+    xss:
+      # 过滤开关
+      enabled: true
+      # 排除链接（多个用逗号分隔）
+      excludes: /system/notice/*
+      # 匹配链接
+      urlPatterns: /system/*,/monitor/*,/tool/*
+  # token配置
+  token:
+    # 令牌自定义标识
+    header: Authorization
+    # 令牌过期时间 此处单位/秒
+    expireTime: 1800
+
+# 开发环境配置
+server:
+  # 服务器的HTTP端口，默认为8080
+  port: 8080
+  servlet:
+    # 应用的访问路径
+    context-path: /
+  undertow:
+    accesslog:
+      enabled: false    # 是否打开 undertow 日志，默认为 false
+      dir: log          # 设置访问日志所在目录
+    buffer-size: 1024   # 以下的配置会影响buffer,这些buffer会用于服务器连接的IO操作,有点类似netty的池化内存管理；
+    direct-buffers: true  # 是否分配的直接内存(NIO直接分配的堆外内存)
+    threads:
+      io: 8     # 指定工作者线程的 I/0 线程数，默认为 2 或者 CPU 的个数
+      worker: 64    # 指定工作者线程个数，默认为 I/O 线程个数的 8 倍
+  shutdown: graceful
+  error:
+    whitelabel:
+      enabled: false
+
+# Spring配置
+spring:
+  application:
+    name: ${project.name}
+  lifecycle:
+    timeout-per-shutdown-phase: 10s
+  # 服务模块
+  devtools:
+    restart:
+      # 热部署开关
+      enabled: true
+
+  # 数据库配置
+  datasource:
+    dynamic:
+      primary: master #设置默认的数据源或者数据源组,默认值即为master
+      strict: false #严格匹配数据源,默认false. true未匹配到指定数据源时抛异常,false使用默认数据源
+      datasource:
+        master:
+          driver-class-name: com.mysql.cj.jdbc.Driver
+          url: jdbc:mysql://127.0.0.1:3306/test?useUnicode=true&serverTimezone=Asia/Shanghai&characterEncoding=utf-8&useSSL=false
+          username: root
+          password: password
+  #          hikari:
+  #            max-lifetime: 1800000
+  #            connection-timeout: 30000
+  #            connection-test-query: select 1
+  #          slave:
+  #            driver-class-name: com.mysql.cj.jdbc.Driver
+  #            url: jdbc:mysql://xx.xx.xx.xx:3307/dynamic
+  #            username: root
+  #            password: 123456
+  #            hikari:
+  #              max-lifetime: 1800000
+  #              connection-timeout: 30000
+  #              connection-test-query: select 1
+
+  # 缓存配置
+  data:
+    redis:
+      host: 127.0.0.1   # Redis服务器地址
+      port: 6379             # Redis服务器连接端口
+      database: 0            # Redis服务器数据库
+      password: password     # Redis服务器连接密码（默认为空）
+      timeout: 6000ms        # 连接超时时间（毫秒）
+      lettuce:
+        pool:
+          min-idle: 0 # 连接池中的最小空闲连接
+          max-idle: 8 # 连接池中的最大空闲连接
+          max-active: 8 # 连接池最大连接数，建议CPU数 + 1
+          max-wait: -1ms  # 连接池最大阻塞等待时间（使用负值表示没有限制）
+  # 文件上传
+  servlet:
+    multipart:
+      max-file-size: 10MB # 单个文件大小
+      max-request-size: 20MB # 设置总上传的文件大小
+
+  jackson:
+    # 日期格式化
+    date-format: yyyy-MM-dd HH:mm:ss
+    # 序列化相关
+    serialization:
+      # 格式化输出
+      indent_output: true
+      # 忽略无法转换的对象
+      fail_on_empty_beans: true
+    # 反序列化相关
+    deserialization:
+      # 解析json时，遇到不存在的属性就忽略
+      fail_on_unknown_properties: false
+    # 设置空如何序列化
+    defaultPropertyInclusion: NON_EMPTY
+    parser:
+      # 允许特殊和转义符
+      allow_unquoted_control_chars: true
+      # 允许单引号
+      allow_single_quotes: true
+
+# MyBatisPlus配置
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: true
+    auto-mapping-behavior: full
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  mapper-locations: classpath*:mybatis/**/*Mapper.xml
+  global-config:
+    # 逻辑删除配置
+    db-config:
+      # 删除前
+      logic-not-delete-value: 1
+      # 删除后
+      logic-delete-value: 0
+
+management:
+  endpoint:
+    shutdown:
+      enabled: true
+    health:
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+        exclude: "shutdown"
+      base-path: /actuator
+  metrics:
+    tags:
+      application: ${spring.application.name}
+  prometheus:
+    metrics:
+      export:
+        enabled: true
+
+# 日志配置
+logging:
+  level:
+    com.liulimi: debug
+    org.springframework: warn
