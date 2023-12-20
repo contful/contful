@@ -1,5 +1,5 @@
 #!/bin/sh
-# ./fastboot.sh start 启动 stop 停止 restart 重启 status 状态
+# ./fastapi.sh start 启动 stop 停止 restart 重启 status 状态
 AppName=target/fastapi.jar
 
 # JVM参数
