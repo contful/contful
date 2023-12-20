@@ -1,9 +1,9 @@
-FROM openjdk:17-jdk-buster
+FROM openjdk:21-jdk-buster
 
 LABEL maintainer="Boolean <hongbin.hsu@bincent.com>"
 
 ADD ./target/*.jar /data/app.jar
-COPY ./config/* /data/config
+COPY config/* /data/config
 
 # set environment
 ARG TIME_ZONE="Asia/Shanghai"

@@ -17,7 +17,7 @@ config/application.yml
 .sts4-cache
 
 ### IntelliJ IDEA ###
-.idea
+api/.idea
 *.iws
 *.iml
 *.ipr

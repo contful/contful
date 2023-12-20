@@ -1,6 +1,5 @@
 package com.contful.admin.domain.server;
 
-import com.contful.framework.util.ArithUtil;
 
 /**
  * 內存相关信息

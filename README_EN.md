@@ -12,6 +12,10 @@ With features such as API prioritization, unlimited scalability, visual content 
 
 Business customization function enables the development of specific functions and modules based on the business needs and characteristics of enterprises to meet their personalized requirements. Meanwhile, it supports deployment on private clouds, ensuring data security and privacy. In terms of data security, advanced data encryption technology and security protection measures are adopted to ensure the security and integrity of user data. In addition, it provides powerful data statistics and analysis functions to help enterprises better understand and grasp the usage and trends of content.
 
+## Contful Admin API
+
+Developed based on Springboot 3, the management API serves as a supporting service for the Dashboard.
+
 ## Clone Project
 
 ```shell

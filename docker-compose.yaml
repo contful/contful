@@ -2,7 +2,7 @@ version: '3'
 
 services:
   java:
-    image: openjdk:17-jdk-buster
+    image: openjdk:21-jdk-buster
     container_name: fastapi
     restart: always
     environment:
