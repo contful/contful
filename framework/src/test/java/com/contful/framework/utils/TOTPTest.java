@@ -1,4 +1,4 @@
-package com.contful.utils;
+package com.contful.framework.utils;
 
 import com.contful.framework.util.TOTPUtils;
 import lombok.extern.slf4j.Slf4j;

@@ -1,4 +1,4 @@
-package com.contful.generator;
+package com.contful.framework.generator;
 
 import com.baomidou.mybatisplus.generator.AutoGenerator;
 import com.baomidou.mybatisplus.generator.config.*;

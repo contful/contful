@@ -1,4 +1,4 @@
-package com.contful.config;
+package com.contful.framework.config;
 
 import com.contful.framework.config.ProjectConfig;
 import lombok.extern.slf4j.Slf4j;

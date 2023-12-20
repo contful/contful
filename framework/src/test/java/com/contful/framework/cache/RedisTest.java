@@ -1,4 +1,4 @@
-package com.contful.cache;
+package com.contful.framework.cache;
 
 import com.contful.framework.util.RedisUtil;
 import lombok.extern.slf4j.Slf4j;
