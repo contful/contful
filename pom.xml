@@ -6,7 +6,7 @@
 
     <groupId>com.contful</groupId>
     <artifactId>contful</artifactId>
-    <version>${contful.version}</version>
+    <version>1.0.0</version>
 
     <name>contful</name>
     <description>Headless CMS</description>
@@ -21,17 +21,20 @@
 
     <!-- Shared configuration for child modules -->
     <modules>
+        <module>admin</module>
         <module>generator</module>
+        <module>framework</module>
     </modules>
     <packaging>pom</packaging>
 
     <properties>
         <contful.version>1.0.0</contful.version>
         <java.version>21</java.version>
+        <maven.compiler.source>21</maven.compiler.source>
+        <maven.compiler.target>21</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <skipTests>true</skipTests>  <!--默认关掉单元测试 -->
-        <compile.version>21</compile.version>
 
         <!-- Framework settings properties -->
         <hutool.version>5.8.23</hutool.version>
@@ -44,6 +47,7 @@
         <bcpkix-jdk15to18.version>1.77</bcpkix-jdk15to18.version>
 
         <!-- Project properties -->
+        <maven-compiler-plugin.version>3.12.0</maven-compiler-plugin.version>
         <jackson-dataformat-xml.version>2.15.3</jackson-dataformat-xml.version>
         <velocity.engine.core.version>2.3</velocity.engine.core.version>
         <mysql.connector.version>8.1.0</mysql.connector.version>
@@ -196,43 +200,6 @@
             <version>${junit.version}</version>
         </dependency>
     </dependencies>
-
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.1</version>
-                <configuration>
-                    <source>${java.version}</source>
-                    <target>${java.version}</target>
-                    <encoding>${project.build.sourceEncoding}</encoding>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
-
-    <profiles>
-        <profile>
-            <id>dev</id>
-            <properties>
-                <!-- 环境标识，需要与配置文件的名称相对应 -->
-                <profiles.active>dev</profiles.active>
-                <logging.level>debug</logging.level>
-            </properties>
-            <activation>
-                <!-- 默认环境 -->
-                <activeByDefault>true</activeByDefault>
-            </activation>
-        </profile>
-        <profile>
-            <id>prod</id>
-            <properties>
-                <profiles.active>prod</profiles.active>
-                <logging.level>warn</logging.level>
-            </properties>
-        </profile>
-    </profiles>
 
     <repositories>
         <repository>

@@ -1,9 +1,9 @@
-package com.contful.generator.controller;
+package com.contful.admin.controller.system;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/tool/gen")
-public class GenController {
+@RequestMapping("/admin/system/menu")
+public class MenuController {
 }
