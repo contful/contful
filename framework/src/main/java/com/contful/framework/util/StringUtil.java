@@ -873,6 +873,7 @@ public class StringUtil extends org.apache.commons.lang3.StringUtils {
 
     /**
      * judge if a Boolean value is true
+     *
      * @param value
      * @return
      */

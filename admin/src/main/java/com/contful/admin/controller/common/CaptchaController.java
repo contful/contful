@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class CaptchaController {
     /**
      * 获取图片验证码
+     *
      * @return
      */
     @SignIgnore

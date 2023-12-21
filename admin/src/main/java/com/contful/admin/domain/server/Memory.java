@@ -1,6 +1,8 @@
 package com.contful.admin.domain.server;
 
 
+import com.contful.framework.util.ArithUtil;
+
 /**
  * 內存相关信息
  */
@@ -20,38 +22,31 @@ public class Memory {
      */
     private double free;
 
-    public double getTotal()
-    {
+    public double getTotal() {
         return ArithUtil.div(total, (1024 * 1024 * 1024), 2);
     }
 
-    public void setTotal(long total)
-    {
+    public void setTotal(long total) {
         this.total = total;
     }
 
-    public double getUsed()
-    {
+    public double getUsed() {
         return ArithUtil.div(used, (1024 * 1024 * 1024), 2);
     }
 
-    public void setUsed(long used)
-    {
+    public void setUsed(long used) {
         this.used = used;
     }
 
-    public double getFree()
-    {
+    public double getFree() {
         return ArithUtil.div(free, (1024 * 1024 * 1024), 2);
     }
 
-    public void setFree(long free)
-    {
+    public void setFree(long free) {
         this.free = free;
     }
 
-    public double getUsage()
-    {
+    public double getUsage() {
         return ArithUtil.mul(ArithUtil.div(used, total, 4), 100);
     }
 }

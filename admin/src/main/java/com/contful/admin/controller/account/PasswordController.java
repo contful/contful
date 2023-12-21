@@ -7,10 +7,10 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/admin/account/password")
-public class PasswordController
-{
+public class PasswordController {
     /**
      * 重置密码
+     *
      * @return
      */
     @PutMapping("/reset")

@@ -12,6 +12,7 @@ public class ProfileController {
 
     /**
      * 个人信息
+     *
      * @return
      */
     @GetMapping("/")
@@ -21,6 +22,7 @@ public class ProfileController {
 
     /**
      * 修改个人信息
+     *
      * @return
      */
     @PutMapping("/")

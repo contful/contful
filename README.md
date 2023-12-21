@@ -2,7 +2,8 @@
 
 简体中文 | [English](./README_EN.md)
 
-Contful是一个开源的Headless CMS项目，以其卓越的功能和特性为企业级内容管理提供了全新的解决方案。作为Contentful的缩写，Contful融合了“Content”（内容）和“ful”（充满的）两个词汇，象征着它致力于打造一个充满丰富、有深度和有广度内容的管理平台。
+Contful是一个开源的Headless
+CMS项目，以其卓越的功能和特性为企业级内容管理提供了全新的解决方案。作为Contentful的缩写，Contful融合了“Content”（内容）和“ful”（充满的）两个词汇，象征着它致力于打造一个充满丰富、有深度和有广度内容的管理平台。
 
 Contful以API为中心，通过强大的API接口，实现了前后端分离的内容管理模式，使得内容的创建、编辑、管理和发布变得更加高效和灵活。
 
@@ -34,12 +35,12 @@ contful (https://github.com/contful/contful)
     └── api (https://github.com/contful/admin-api) // 二级子模块
 ```
 
-| 仓库                                                            | 描述                 | 状态      |
-| --------------------------------------------------------------- | -------------------- | --------- |
-| [contful](https://github.com/contful/contful)           | 包含服务API、管理API、控制台的仓库集合       | `开发中` |
-| [api](https://github.com/contful/api)           | 提供给客户端使用的服务API       | `开发中` |
-| [dashboard](https://github.com/contful/admin-dashboard) | 控制台前端页面       | `开发中` |
-| [admin-api](https://github.com/contful/admin-api)       | 与控制台配套管理API    | `开发中` |
+| 仓库                                                      | 描述                     | 状态    |
+|---------------------------------------------------------|------------------------|-------|
+| [contful](https://github.com/contful/contful)           | 包含服务API、管理API、控制台的仓库集合 | `开发中` |
+| [api](https://github.com/contful/api)                   | 提供给客户端使用的服务API         | `开发中` |
+| [dashboard](https://github.com/contful/admin-dashboard) | 控制台前端页面                | `开发中` |
+| [admin-api](https://github.com/contful/admin-api)       | 与控制台配套管理API            | `开发中` |
 
 ## 为什么开源
 

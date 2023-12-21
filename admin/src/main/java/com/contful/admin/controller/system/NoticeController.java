@@ -11,6 +11,7 @@ public class NoticeController {
 
     /**
      * 通知列表
+     *
      * @return
      */
     @GetMapping("/items")
@@ -20,6 +21,7 @@ public class NoticeController {
 
     /**
      * 通知详情
+     *
      * @return
      */
     @GetMapping("/detail")
