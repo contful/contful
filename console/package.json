@@ -1,6 +1,6 @@
 {
   "name": "contful-console",
-  "version": "1.6.2",
+  "version": "1.6.3",
   "type": "module",
   "license": "Apache-2.0",
   "author": "reepu.com (https://reepu.com)",
@@ -19,30 +19,30 @@
   "dependencies": {
     "@pinia/colada": "^0.21.2",
     "@tinymce/tinymce-vue": "^6.3.0",
-    "@tiptap/starter-kit": "3.23.6",
-    "@tiptap/vue-3": "3.23.6",
-    "@vue/compiler-sfc": "3.5.35",
-    "axios": "^1.17.0",
+    "@tiptap/starter-kit": "3.26.1",
+    "@tiptap/vue-3": "3.26.1",
+    "@vue/compiler-sfc": "3.5.38",
+    "axios": "^1.18.0",
     "jsencrypt": "^3.5.4",
     "pinia": "^3.0.4",
     "sm-crypto": "^0.4.0",
-    "tdesign-vue-next": "^1.20.0",
+    "tdesign-vue-next": "^1.20.1",
     "tinymce": "^8.6.0",
-    "vue": "3.5.35",
+    "vue": "3.5.38",
     "vue-i18n": "^9",
     "vue-json-pretty": "^2.6.0",
     "vue-router": "5.1.0"
   },
   "devDependencies": {
-    "@tiptap/core": "3.23.6",
-    "@tiptap/pm": "3.23.6",
-    "@types/node": "^25.9.1",
+    "@tiptap/core": "3.26.1",
+    "@tiptap/pm": "3.26.1",
+    "@types/node": "^25.9.3",
     "@vitejs/plugin-vue": "^6.0.7",
     "eslint": "^8.55.0",
     "eslint-plugin-vue": "^9.19.0",
     "postcss": "^8.5.15",
     "typescript": "^6.0.3",
     "vite": "8.0.16",
-    "vue-tsc": "3.3.3"
+    "vue-tsc": "3.3.5"
   }
 }
