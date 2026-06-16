@@ -11,6 +11,7 @@ import (
 	"github.com/contful/contful/admin/internal/model"
 	"github.com/contful/contful/admin/internal/repository"
 	"github.com/google/uuid"
+	"github.com/rs/zerolog/log"
 	"gorm.io/gorm"
 )
 
@@ -310,8 +311,12 @@ func (s *EntryService) Publish(ctx context.Context, siteID uuid.UUID, userID *uu
 
 	// 发布时重新签名
 	if integritySvc != nil {
-		_ = integritySvc.SignEntry(entry, entry.Values)
-		_ = s.entryRepo.Update(ctx, entry)
+		if err := integritySvc.SignEntry(entry, entry.Values); err != nil {
+			log.Warn().Err(err).Interface("entry_id", entry.ID).Msg("failed to sign entry")
+		}
+		if err := s.entryRepo.Update(ctx, entry); err != nil {
+			log.Warn().Err(err).Interface("entry_id", entry.ID).Msg("failed to update signed entry")
+		}
 	}
 
 	return entry, nil

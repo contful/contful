@@ -8,8 +8,9 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
-	"log"
 	"strconv"
+
+	"github.com/rs/zerolog/log"
 
 	"github.com/contful/contful/openapi/internal/repository"
 	"github.com/google/uuid"
@@ -62,7 +63,7 @@ func (s *EntryService) ListBySlug(ctx context.Context, siteID uuid.UUID, slug st
 	if cachedData, err := s.cacheSvc.Get(ctx, cacheKey); err == nil && cachedData != nil {
 		var resp EntryListResponse
 		if err := json.Unmarshal(cachedData, &resp); err == nil {
-			log.Printf("[Cache] Hit: %s", cacheKey)
+			log.Debug().Str("key", cacheKey).Msg("[Cache] Hit")
 			return &resp, nil
 		}
 	}
@@ -100,7 +101,7 @@ func (s *EntryService) ListBySlug(ctx context.Context, siteID uuid.UUID, slug st
 	// 5. 写入缓存（跳过空结果，避免缓存穿透导致新发布内容不可见）
 	if total > 0 {
 		if err := s.cacheSvc.Set(ctx, cacheKey, resp); err != nil {
-			log.Printf("[Cache] Set failed: %v", err)
+			log.Warn().Err(err).Msg("[Cache] Set failed")
 		}
 	}
 
@@ -114,7 +115,7 @@ func (s *EntryService) GetByID(ctx context.Context, siteID uuid.UUID, slug strin
 	if cachedData, err := s.cacheSvc.Get(ctx, cacheKey); err == nil && cachedData != nil {
 		var item EntryItem
 		if err := json.Unmarshal(cachedData, &item); err == nil {
-			log.Printf("[Cache] Hit: %s", cacheKey)
+			log.Debug().Str("key", cacheKey).Msg("[Cache] Hit")
 			return &item, nil
 		}
 	}
@@ -134,7 +135,7 @@ func (s *EntryService) GetByID(ctx context.Context, siteID uuid.UUID, slug strin
 
 	// 3. 写入缓存
 	if err := s.cacheSvc.Set(ctx, cacheKey, item); err != nil {
-		log.Printf("[Cache] Set failed: %v", err)
+		log.Warn().Err(err).Msg("[Cache] Set failed")
 	}
 
 	return &item, nil

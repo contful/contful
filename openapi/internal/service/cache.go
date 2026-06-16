@@ -36,7 +36,7 @@ func NewCacheService(rdb *redis.Client) *CacheService {
 // GetEntryListKey 生成内容列表缓存键
 // 格式: contful:content:{siteID}:{slug}:{locale}:{sort}:{order}:{page}:{size}
 func (s *CacheService) GetEntryListKey(siteID uuid.UUID, slug, locale, sortField, sortOrder string, page, pageSize int) string {
-	return fmt.Sprintf("%s%s:%s:%s:%s:%s:%d:%d:%d",
+	return fmt.Sprintf("%s%s:%s:%s:%s:%s:%d:%d",
 		CacheKeyPrefix, siteID.String(), slug, locale, sortField, sortOrder, page, pageSize)
 }
 

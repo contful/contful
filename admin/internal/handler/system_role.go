@@ -4,11 +4,11 @@ package handler
 
 import (
 	"fmt"
-	"log"
 	"net/http"
 
 	"github.com/gin-gonic/gin"
 	"github.com/google/uuid"
+	"github.com/rs/zerolog/log"
 	"github.com/contful/contful/admin/internal/middleware"
 	"github.com/contful/contful/admin/internal/model"
 	"github.com/contful/contful/admin/internal/service"
@@ -29,7 +29,7 @@ func NewSystemRoleHandler(rbacService *service.RBACService, auditService *servic
 func (h *SystemRoleHandler) List(c *gin.Context) {
 	roles, err := h.rbacService.ListSystemRoles(c.Request.Context())
 	if err != nil {
-		log.Printf("[SystemRole] List failed: %v", err)
+		log.Err(err).Msg("[SystemRole] List failed")
 		c.JSON(http.StatusInternalServerError, model.NewErrorResponse(model.CodeInternalError, "internal error"))
 		return
 	}

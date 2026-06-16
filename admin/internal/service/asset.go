@@ -18,6 +18,7 @@ import (
 
 	"github.com/contful/contful/admin/internal/model"
 	"github.com/contful/contful/admin/internal/repository"
+	"github.com/rs/zerolog/log"
 	"github.com/contful/contful/admin/internal/storage"
 
 	"github.com/google/uuid"
@@ -229,7 +230,9 @@ func (s *AssetService) Upload(ctx context.Context, siteID, userID uuid.UUID, fil
 	// 保存到数据库
 	if err := s.assetRepo.Create(ctx, asset); err != nil {
 		// 删除已上传的文件（回滚）
-		_ = s.storageProvider.Delete(ctx, storageKey)
+		if delErr := s.storageProvider.Delete(ctx, storageKey); delErr != nil {
+			log.Warn().Err(delErr).Str("key", storageKey).Msg("failed to rollback uploaded file")
+		}
 		return nil, fmt.Errorf("保存资源记录失败: %w", err)
 	}
 
@@ -239,8 +242,12 @@ func (s *AssetService) Upload(ctx context.Context, siteID, userID uuid.UUID, fil
 		alg := "HMAC-SHA256" // 默认算法
 		intSvc, _ := NewIntegrityService(siteID, signingKey, alg)
 		if intSvc != nil && intSvc.IsEnabled() {
-			_ = intSvc.SignAsset(asset)
-			_ = s.assetRepo.Update(ctx, asset)
+			if err := intSvc.SignAsset(asset); err != nil {
+				log.Warn().Err(err).Interface("asset_id", asset.ID).Msg("failed to sign asset")
+			}
+			if err := s.assetRepo.Update(ctx, asset); err != nil {
+				log.Warn().Err(err).Interface("asset_id", asset.ID).Msg("failed to update signed asset")
+			}
 		}
 	}
 

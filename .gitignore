@@ -68,4 +68,4 @@ audit-report-*.md
 
 # 前端锁文件（使用 yarn）
 console/package-lock.json
-.gitignore ssl/*.pem
+ssl/*.pem

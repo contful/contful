@@ -4,12 +4,12 @@ package handler
 
 import (
 	"errors"
-	"log"
 	"net/http"
 	"strings"
 
 	"github.com/gin-gonic/gin"
 	"github.com/google/uuid"
+	"github.com/rs/zerolog/log"
 
 	"github.com/contful/contful/admin/internal/crypto"
 	"github.com/contful/contful/admin/internal/middleware"
@@ -194,7 +194,7 @@ func (h *AuthHandler) Refresh(c *gin.Context) {
 
 	// 优先从 HttpOnly Cookie 读取（Login 时写入）
 	cookie, err := c.Cookie("refresh_token")
-	log.Printf("[Refresh] Cookie refresh_token=%q, err=%v", cookie, err)
+	log.Debug().Str("cookie", cookie).Err(err).Msg("[Refresh] reading refresh_token cookie")
 	if err == nil && cookie != "" {
 		refreshToken = cookie
 	} else {
