@@ -192,7 +192,7 @@ const handleCreateSite = async () => {
     return
   }
   const slug = newSiteSlug.value.trim() || generateSlug(newSiteName.value)
-  if (!/^[a-z][a-z0-9\-]{0,98}[a-z0-9]$/.test(slug)) {
+  if (!/^[a-z][a-z0-9-]{0,98}[a-z0-9]$/.test(slug)) {
     showError({ response: { data: { msg: t('site.formatError') } } } as any)
     return
   }

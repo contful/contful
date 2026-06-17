@@ -1,6 +1,6 @@
 {
   "name": "contful-console",
-  "version": "1.6.3",
+  "version": "1.6.5",
   "type": "module",
   "license": "Apache-2.0",
   "author": "reepu.com (https://reepu.com)",
@@ -17,7 +17,6 @@
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix"
   },
   "dependencies": {
-    "@pinia/colada": "^0.21.2",
     "@tinymce/tinymce-vue": "^6.3.0",
     "@tiptap/starter-kit": "3.26.1",
     "@tiptap/vue-3": "3.26.1",
@@ -29,19 +28,22 @@
     "tdesign-vue-next": "^1.20.1",
     "tinymce": "^8.6.0",
     "vue": "3.5.38",
-    "vue-i18n": "^9",
+    "vue-i18n": "^11.4.5",
     "vue-json-pretty": "^2.6.0",
     "vue-router": "5.1.0"
   },
   "devDependencies": {
+    "@eslint/js": "^10.0.1",
     "@tiptap/core": "3.26.1",
     "@tiptap/pm": "3.26.1",
     "@types/node": "^25.9.3",
     "@vitejs/plugin-vue": "^6.0.7",
-    "eslint": "^8.55.0",
-    "eslint-plugin-vue": "^9.19.0",
+    "eslint": "^10.5.0",
+    "eslint-plugin-vue": "^10.9.2",
+    "globals": "^17.6.0",
     "postcss": "^8.5.15",
     "typescript": "^6.0.3",
+    "typescript-eslint": "^8.61.1",
     "vite": "8.0.16",
     "vue-tsc": "3.3.5"
   }

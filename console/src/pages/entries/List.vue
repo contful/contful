@@ -289,7 +289,7 @@ const confirmBatchAction = (action: 'delete' | 'publish' | 'unpublish') => {
     unpublish: t('content.batchUnpublish'),
   }
   const count = selectedIds.value.size
-  let bodyText = ''
+  let bodyText: string
   if (action === 'delete') {
     bodyText = t('content.batchDeleteMsg', { count })
   } else {

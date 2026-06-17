@@ -170,9 +170,11 @@
           <div class="user-detail__row">
             <span class="user-detail__label">{{ t('users.role') }}</span>
             <div class="user-detail__roles">
-              <t-tag v-if="viewUserRoles.length > 0" v-for="r in viewUserRoles" :key="r.id" theme="primary" variant="light" size="small">
-                {{ r.name }}
-              </t-tag>
+              <template v-if="viewUserRoles.length > 0">
+                <t-tag v-for="r in viewUserRoles" :key="r.id" theme="primary" variant="light" size="small">
+                  {{ r.name }}
+                </t-tag>
+              </template>
               <t-tag v-else-if="viewUser && viewUser.is_super_admin" theme="warning" variant="light" size="small">
                 {{ t('users.superAdmin') }}
               </t-tag>
