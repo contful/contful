@@ -262,7 +262,7 @@
   resolved "https://registry.npmjs.org/@tinymce/tinymce-vue/-/tinymce-vue-6.3.0.tgz"
   integrity sha512-DSP8Jhd3XqCCliTnusfbmz3D8GqQ4iRzkc4aadYHDcJPVjkaqopJ61McOdH82CSy599vGLkPjGzqJYWJkRMiUA==
 
-"@tiptap/core@^3.27.3":
+"@tiptap/core@^3.27.3", "@tiptap/core@3.27.3":
   version "3.27.3"
   resolved "https://registry.npmmirror.com/@tiptap/core/-/core-3.27.3.tgz"
   integrity sha512-TJj5929M96C1KlH796wS8MywfHDh49RhmakOyzyMMc9pFmRj9UXi1gj0TCXgsZtjEOG7B+m/DRvNOvnuvR9kmg==
@@ -356,7 +356,7 @@
   resolved "https://registry.npmmirror.com/@tiptap/extension-list-keymap/-/extension-list-keymap-3.27.3.tgz"
   integrity sha512-GZPVg4QCFm41yTMPEPeTlH2odNeQwRuWHY/pt3pI5LsfipQ4kDBv6h9we928vJQUnU2Gg9Y3cL5iRbmXIWWTUA==
 
-"@tiptap/extension-list@^3.27.3":
+"@tiptap/extension-list@^3.27.3", "@tiptap/extension-list@3.27.3":
   version "3.27.3"
   resolved "https://registry.npmmirror.com/@tiptap/extension-list/-/extension-list-3.27.3.tgz"
   integrity sha512-52rcaSzYjtVGUrNkdB8k1Bw/rId2lBirrWMvmnBLsieoeFd8zo8ow5zkwV057BYSgWXfnMAV7GOpDyq2IoSD9A==
@@ -386,12 +386,12 @@
   resolved "https://registry.npmmirror.com/@tiptap/extension-underline/-/extension-underline-3.27.3.tgz"
   integrity sha512-YH7ka/Rp7ZwlzTuQCcs0OZ4CMSx/P/MzbseQKxKebEIZreWaKMZAaED97Fnu0dA66VlreD4/1C7xHJy84ovamg==
 
-"@tiptap/extensions@^3.27.3":
+"@tiptap/extensions@^3.27.3", "@tiptap/extensions@3.27.3":
   version "3.27.3"
   resolved "https://registry.npmmirror.com/@tiptap/extensions/-/extensions-3.27.3.tgz"
   integrity sha512-IA2QKUVJgzUPEhhkUfr6P5u5GFVfhiApiEaaHXBz07saL2c4HNoVs2RC18QlZDCtLNKrPR1mUScr72u7uYs+YQ==
 
-"@tiptap/pm@^3.27.3":
+"@tiptap/pm@^3.27.3", "@tiptap/pm@3.27.3":
   version "3.27.3"
   resolved "https://registry.npmmirror.com/@tiptap/pm/-/pm-3.27.3.tgz"
   integrity sha512-ppiG57RxM3HSHHgcHT0hP6Ib4P56Sd5itxdV4w0hIGHKPGyLLKiAkYp+htIHa9T7IvjMdaqxIlsfyV3ZKsS1sw==
@@ -480,7 +480,7 @@
   resolved "https://registry.npmjs.org/@types/lodash/-/lodash-4.17.24.tgz"
   integrity sha512-gIW7lQLZbue7lRSWEFql49QJJWThrTFFeIMJdp3eH4tKoxm1OvEPg02rm4wCCSHS0cL3/Fizimb35b7k8atwsQ==
 
-"@types/node@^25.9.5":
+"@types/node@^20.19.0 || >=22.12.0", "@types/node@^25.9.5":
   version "25.9.5"
   resolved "https://registry.npmmirror.com/@types/node/-/node-25.9.5.tgz"
   integrity sha512-OScDchr2fwuUmWdf4kZ9h7PcJiYDVInhJizG/biAq3cAvqwYktuy/TYGGdZNMtNTFUP7rnb0NU4TUdm82kt4Rg==
@@ -516,7 +516,7 @@
     natural-compare "^1.4.0"
     ts-api-utils "^2.5.0"
 
-"@typescript-eslint/parser@8.63.0":
+"@typescript-eslint/parser@^7.0.0 || ^8.0.0", "@typescript-eslint/parser@^8.63.0", "@typescript-eslint/parser@8.63.0":
   version "8.63.0"
   resolved "https://registry.npmmirror.com/@typescript-eslint/parser/-/parser-8.63.0.tgz"
   integrity sha512-gwh4gvvlaVDKKxyfxMG+Gnu1u9X0OQBwyGLkbwB65dIzBKnxeRiJlNFqlI3zwVhNXJIs6qV7mlFCn/BIajlVig==
@@ -656,7 +656,7 @@
     "@vue/compiler-core" "3.5.39"
     "@vue/shared" "3.5.39"
 
-"@vue/compiler-sfc@^3.5.22", "@vue/compiler-sfc@^3.5.39", "@vue/compiler-sfc@3.5.39":
+"@vue/compiler-sfc@^3.5.22", "@vue/compiler-sfc@^3.5.34", "@vue/compiler-sfc@^3.5.39", "@vue/compiler-sfc@3.5.39":
   version "3.5.39"
   resolved "https://registry.npmmirror.com/@vue/compiler-sfc/-/compiler-sfc-3.5.39.tgz"
   integrity sha512-d0ki86iOyN8LoZPBmk5SJWNwHP19CnDDCfuo//+2WJa2g5Ke0Jay983PIBIcSSzldC68I8DrD5GrHV3OSDfodg==
@@ -789,7 +789,7 @@ acorn-jsx@^5.3.2:
   resolved "https://repo.huaweicloud.com/repository/npm/acorn-jsx/-/acorn-jsx-5.3.2.tgz"
   integrity sha512-rq9s+JNhf0IChjtDXxllJ7g41oZk5SlXtp0LHwyA5cejwn7vKmKp4pPri6YEePv2PU65sAsegbXtIinmDFDXgQ==
 
-acorn@^8.16.0:
+"acorn@^6.0.0 || ^7.0.0 || ^8.0.0", acorn@^8.16.0:
   version "8.16.0"
   resolved "https://registry.npmjs.org/acorn/-/acorn-8.16.0.tgz"
   integrity sha512-UVJyE9MttOsBQIDKw1skb9nAwQuR5wuGD3+82K6JgJlm/Y+KI92oNsMNGZCYdDsVtRHSak0pcV5Dno5+4jh9sw==
@@ -933,7 +933,7 @@ dayjs@^1.11.10:
   resolved "https://registry.npmjs.org/dayjs/-/dayjs-1.11.20.tgz"
   integrity sha512-YbwwqR/uYpeoP4pu043q+LTDLFBLApUP6VxRihdfNTqu4ubqMlGDLd6ErXhEgsyvY0K6nCs7nggYumAN+9uEuQ==
 
-debug@^4.3.1, debug@^4.3.2, debug@^4.4.3, debug@4:
+debug@^4.3.1, debug@^4.3.2, debug@^4.4.0, debug@^4.4.3, debug@4:
   version "4.4.3"
   resolved "https://registry.npmjs.org/debug/-/debug-4.4.3.tgz"
   integrity sha512-RGwwWnwQvkVfavKVt22FGLw+xYSdzARwm0ru6DhTVA3umU5hZc28V3kO4stgYryrTlLpuvgI9GiijltAjNbcqA==
@@ -1013,7 +1013,7 @@ eslint-plugin-vue@^10.9.2:
     semver "^7.6.3"
     xml-name-validator "^4.0.0"
 
-eslint-scope@^9.1.2:
+"eslint-scope@^8.2.0 || ^9.0.0", eslint-scope@^9.1.2:
   version "9.1.2"
   resolved "https://repo.huaweicloud.com/repository/npm/eslint-scope/-/eslint-scope-9.1.2.tgz"
   integrity sha512-xS90H51cKw0jltxmvmHy2Iai1LIqrfbw57b79w/J7MfvDfkIkFZ+kj6zC3BjtUwh150HsSSdxXZcsuv72miDFQ==
@@ -1028,15 +1028,15 @@ eslint-visitor-keys@^3.4.3:
   resolved "https://repo.huaweicloud.com/repository/npm/eslint-visitor-keys/-/eslint-visitor-keys-3.4.3.tgz"
   integrity sha512-wpc+LXeiyiisxPlEkUzU6svyS1frIO3Mgxj1fdy7Pm8Ygzguax2N3Fa/D/ag1WqbOprdI+uY6wMUl8/a2G+iag==
 
-eslint-visitor-keys@^5.0.0, eslint-visitor-keys@^5.0.1:
+"eslint-visitor-keys@^4.2.0 || ^5.0.0", eslint-visitor-keys@^5.0.0, eslint-visitor-keys@^5.0.1:
   version "5.0.1"
   resolved "https://repo.huaweicloud.com/repository/npm/eslint-visitor-keys/-/eslint-visitor-keys-5.0.1.tgz"
   integrity sha512-tD40eHxA35h0PEIZNeIjkHoDR4YjjJp34biM0mDvplBe//mB+IHCqHDGV7pxF+7MklTvighcCPPZC7ynWyjdTA==
 
-eslint@^10.6.0:
-  version "10.6.0"
-  resolved "https://registry.npmmirror.com/eslint/-/eslint-10.6.0.tgz"
-  integrity sha512-6lVbcqSodALYo+4ELD0heG6lFiFxnLMuLkiMi2qV8LMp54N8tE8FT1GMH+ev4Ti00nFjNze2+Su6DsV5OQW3Dg==
+eslint@^10.0.0, eslint@^10.7.0, "eslint@^6.0.0 || ^7.0.0 || >=8.0.0", "eslint@^8.57.0 || ^9.0.0 || ^10.0.0":
+  version "10.7.0"
+  resolved "https://registry.npmmirror.com/eslint/-/eslint-10.7.0.tgz"
+  integrity sha512-GVTD7s1vdIl6UYvAfriOPeY1Df8LIZjfofLvHwde+erDHGGuHyuM6xoxRxmHiebhYuD2p1vN4wWh0XzPARSGDQ==
   dependencies:
     "@eslint-community/eslint-utils" "^4.8.0"
     "@eslint-community/regexpp" "^4.12.2"
@@ -1069,7 +1069,7 @@ eslint@^10.6.0:
     natural-compare "^1.4.0"
     optionator "^0.9.3"
 
-espree@^11.2.0:
+"espree@^10.3.0 || ^11.0.0", espree@^11.2.0:
   version "11.2.0"
   resolved "https://repo.huaweicloud.com/repository/npm/espree/-/espree-11.2.0.tgz"
   integrity sha512-7p3DrVEIopW1B1avAGLuCSh1jubc01H2JHc8B4qqGblmg5gI9yumBgACjWo4JlIc04ufug4xJ3SQI8HkS/Rgzw==
@@ -1078,7 +1078,7 @@ espree@^11.2.0:
     acorn-jsx "^5.3.2"
     eslint-visitor-keys "^5.0.1"
 
-esquery@^1.7.0:
+esquery@^1.6.0, esquery@^1.7.0:
   version "1.7.0"
   resolved "https://repo.huaweicloud.com/repository/npm/esquery/-/esquery-1.7.0.tgz"
   integrity sha512-Ap6G0WQwcU/LHsvLwON1fAQX9Zp0A2Y6Y/cJBl9r/JbW90Zyg4/zbG6zzKa2OTALELarYHmKu0GhpM5EO+7T0g==
@@ -1542,10 +1542,10 @@ picocolors@^1.1.1:
   resolved "https://registry.npmjs.org/picocolors/-/picocolors-1.1.1.tgz"
   integrity sha512-xceH2snhtb5M9liqDsmEw56le376mTZkEX/jEb/RxNFyegNul7eNslCXP9FDj/Lcu0X8KEyMceP2ntpaHrDEVA==
 
-picomatch@^4.0.3, picomatch@^4.0.4:
-  version "4.0.4"
-  resolved "https://registry.npmjs.org/picomatch/-/picomatch-4.0.4.tgz"
-  integrity sha512-QP88BAKvMam/3NxH6vj2o21R6MjxZUAd6nlwAS/pnGvN9IVLocLHxGYIzFhg6fUQ+5th6P4dv4eW9jX3DSIj7A==
+"picomatch@^3 || ^4", picomatch@^4.0.3, picomatch@^4.0.4, picomatch@^4.0.5:
+  version "4.0.5"
+  resolved "https://registry.npmmirror.com/picomatch/-/picomatch-4.0.5.tgz"
+  integrity sha512-RvwwcruNjI1ncT5xRakeyS9Lf8lcItv34KD+aif+VH9kduAyfYBipGh12274xtenIPZ119/R9BdTBa8gAwSh0A==
 
 pinia@^3.0.4:
   version "3.0.4"
@@ -1580,10 +1580,10 @@ postcss-selector-parser@^7.1.0:
     cssesc "^3.0.0"
     util-deprecate "^1.0.2"
 
-postcss@^8.5.15, postcss@^8.5.16:
-  version "8.5.16"
-  resolved "https://registry.npmmirror.com/postcss/-/postcss-8.5.16.tgz"
-  integrity sha512-vuwillviilfKZsg0VGj5R/YwwcHx4SLsIOI/7K6mQkWx+l5cUHTjj5g0AasTBcyXsbfTgrwsUNmVUb5xVwyPwg==
+postcss@^8.5.15, postcss@^8.5.16, postcss@^8.5.18:
+  version "8.5.18"
+  resolved "https://registry.npmmirror.com/postcss/-/postcss-8.5.18.tgz"
+  integrity sha512-xdB1oSLHbz1vRWgCDalrCqEFTWzFlhqFC5tIHLMOSUIjhm3XXQ1qrFy8S/ESr1JYRRXqM3c1QFiMZUJdUTqyMQ==
   dependencies:
     nanoid "^3.3.12"
     picocolors "^1.1.1"
@@ -1732,7 +1732,7 @@ rfdc@^1.4.1:
   resolved "https://registry.npmjs.org/rfdc/-/rfdc-1.4.1.tgz"
   integrity sha512-q1b3N5QkRUWUl7iyylaaj3kOpIT0N2i9MqIEQXP73GVsN9cw3fdx8X63cEmWhJGi2PPCF23Ijp7ktmd39rawIA==
 
-rolldown@~1.1.3:
+rolldown@~1.1.4:
   version "1.1.4"
   resolved "https://registry.npmmirror.com/rolldown/-/rolldown-1.1.4.tgz"
   integrity sha512-IjZYiLxZwpnhwhdBH2ugdTGVSdhCQUmLxLoqyjiL0JxYjyRst+5a0P3xfrTxJ5F638j4Mvvw5FAX5XE6eHpXbA==
@@ -1851,7 +1851,7 @@ tinyglobby@^0.2.15, tinyglobby@^0.2.16, tinyglobby@^0.2.17:
     fdir "^6.5.0"
     picomatch "^4.0.4"
 
-tinymce@^8.7.0:
+"tinymce@^8.0.0 || ^7.0.0 || ^6.0.0 || ^5.5.1", tinymce@^8.7.0:
   version "8.7.0"
   resolved "https://registry.npmmirror.com/tinymce/-/tinymce-8.7.0.tgz"
   integrity sha512-V3fBgEzKxKT5d41/3qkXs//2SjANGHzo1MWnU2ai8nss8YrzPprrRFlDbX2X9Z6ClyQAknojs7CzEgcsTdqhPQ==
@@ -1878,7 +1878,7 @@ typescript-eslint@^8.63.0:
     "@typescript-eslint/typescript-estree" "8.63.0"
     "@typescript-eslint/utils" "8.63.0"
 
-typescript@^6.0.3:
+typescript@*, typescript@^6.0.3, typescript@>=4.5.0, typescript@>=4.8.4, "typescript@>=4.8.4 <6.1.0", typescript@>=5.0.0:
   version "6.0.3"
   resolved "https://registry.npmjs.org/typescript/-/typescript-6.0.3.tgz"
   integrity sha512-y2TvuxSZPDyQakkFRPZHKFm+KKVqIisdg9/CZwm9ftvKXLP8NRWj38/ODjNbr43SsoXqNuAisEf1GdCxqWcdBw==
@@ -1927,15 +1927,15 @@ validator@^13.15.23:
   resolved "https://registry.npmjs.org/validator/-/validator-13.15.35.tgz"
   integrity sha512-TQ5pAGhd5whStmqWvYF4OjQROlmv9SMFVt37qoCBdqRffuuklWYQlCNnEs2ZaIBD1kZRNnikiZOS1eqgkar0iw==
 
-vite@^8.1.3:
-  version "8.1.3"
-  resolved "https://registry.npmmirror.com/vite/-/vite-8.1.3.tgz"
-  integrity sha512-Ds+gBRbj0lwRO2Y5hwnUBdxSwlAve9LeRyU4sNnAr0ewW0gWF0n5bgXgUzbgZ49MV9BVUAQUFYVcDUcilUExMA==
+"vite@^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0", "vite@^7.0.0 || ^8.0.0", vite@^8.1.4:
+  version "8.1.4"
+  resolved "https://registry.npmmirror.com/vite/-/vite-8.1.4.tgz"
+  integrity sha512-bTT9PsdWO+MQMNG9ZXIP/qM9wGh37DFxTV/sPq9cFpHr3w4jkgef032PkAL9jAqhk3Nz8NQw3O8n6/xFkqO4QQ==
   dependencies:
     lightningcss "^1.32.0"
-    picomatch "^4.0.4"
+    picomatch "^4.0.5"
     postcss "^8.5.16"
-    rolldown "~1.1.3"
+    rolldown "~1.1.4"
     tinyglobby "^0.2.17"
   optionalDependencies:
     fsevents "~2.3.3"
@@ -1944,6 +1944,18 @@ vscode-uri@^3.0.8:
   version "3.1.0"
   resolved "https://registry.npmjs.org/vscode-uri/-/vscode-uri-3.1.0.tgz"
   integrity sha512-/BpdSx+yCQGnCvecbyXdxHDkuk55/G3xwnC0GqY4gmQ3j+A+g8kzzgB4Nk/SINjqn6+waqw3EgbVF2QKExkRxQ==
+
+vue-eslint-parser@^10.3.0:
+  version "10.4.1"
+  resolved "https://registry.npmmirror.com/vue-eslint-parser/-/vue-eslint-parser-10.4.1.tgz"
+  integrity sha512-Gk6gRDj0n/fkRa3C3l0bBheoBckUq/Rs0F/TvMWIS6nzzx67amAViMe9CkNgsP2tXyQONvGiHQESHwFtZ3aYDA==
+  dependencies:
+    debug "^4.4.0"
+    eslint-scope "^8.2.0 || ^9.0.0"
+    eslint-visitor-keys "^4.2.0 || ^5.0.0"
+    espree "^10.3.0 || ^11.0.0"
+    esquery "^1.6.0"
+    semver "^7.6.3"
 
 vue-i18n@^11.4.6:
   version "11.4.6"
@@ -1991,7 +2003,7 @@ vue-tsc@^3.3.7:
     "@volar/typescript" "2.4.28"
     "@vue/language-core" "3.3.7"
 
-vue@^3.5.39:
+"vue@^2.7.0 || ^3.2.25", vue@^3.0.0, vue@^3.2.25, vue@^3.5.11, vue@^3.5.34, vue@^3.5.39, vue@>=3.0.0, vue@>=3.1.0, vue@3.5.39:
   version "3.5.39"
   resolved "https://registry.npmmirror.com/vue/-/vue-3.5.39.tgz"
   integrity sha512-xmZCYabFGcirU8r0fTuvl/LICc1OU620rnqepaJDL/a141ZigkG7AyaxQLdqJ02ZRYzWe6YPaDHeQx7MfknQfA==
@@ -2029,7 +2041,7 @@ xml-name-validator@^4.0.0:
   resolved "https://repo.huaweicloud.com/repository/npm/xml-name-validator/-/xml-name-validator-4.0.0.tgz"
   integrity sha512-ICP2e+jsHvAj2E2lIHxa5tjXRlKDJo4IdvPvCXbXQGdzSfmSpNVyIKMvoZHjDY9DP0zV17iI85o90vRFXNccRw==
 
-yaml@^2.9.0:
+yaml@^2.4.2, yaml@^2.9.0:
   version "2.9.0"
   resolved "https://repo.huaweicloud.com/repository/npm/yaml/-/yaml-2.9.0.tgz"
   integrity sha512-2AvhNX3mb8zd6Zy7INTtSpl1F15HW6Wnqj0srWlkKLcpYl/gMIMJiyuGq2KeI2YFxUPjdlB+3Lc10seMLtL4cA==
